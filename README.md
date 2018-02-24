@@ -119,12 +119,12 @@ Summary
 - Total size in memory
 - time to execute
 - Variable types
--- Numeric
--- Categorical
--- Bolean
--- Text (unique(?))
--- Rejected
--- Unsupported
+    - Numeric
+    - Categorical
+    - Bolean
+    - Text (unique(?))
+    - Rejected
+    - Unsupported
 
 
 For all data types:
@@ -134,11 +134,11 @@ For all data types:
 - Uniqueness
 - Length
 - Warnings
--- % missing > threshold
--- % 0 > threshold
--- high cardinality but not unique
--- high correlation > threshold
--- constant value
+    - % missing > threshold
+    - % 0 > threshold
+    - high cardinality but not unique
+    - high correlation > threshold
+    - constant value
 
 
 
@@ -166,8 +166,8 @@ Warnings that are available:
 ### cross-column analysis
 - identify prospective keys
 - identify correlation (codes should be 1:1 with description etc.)
--- identify multiple standards for flags (True/False 0/1 Y/N 1/blank account
-   for nulls)
+    - identify multiple standards for flags (True/False 0/1 Y/N 1/blank account
+      for nulls)
 
 ### Inter-table Analysis
 - overalapping value sets that may represent foreign key relatinships
@@ -181,8 +181,8 @@ Warnings that are available:
 - Provide sample data (random, quasi-random, or just top?)
 - Progress to something user-readable, like an html output?
 - Finally an interactive interface would be amazingly effective. 
-
-- Ability to see all distinct values or link to other queries
+- Ability to see all distinct values or link to other queries that provide more
+  information
 
 # Greg's ideas and questions
 
