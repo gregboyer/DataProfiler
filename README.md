@@ -10,9 +10,39 @@ https://github.com/carwin/markdown-styleguide
 This project enables quick and comprehensive data profiling as a starting point 
 for data exploration and assessing data quality.
 
+While primarily intended as a group learning project, this will also be a
+functioning tool
+
 # Prerequisites
 
+- Git (https://git-scm.com/downloads)
+- github account (https://github.com)
+- Python 3.6 (included in anaconda)
+- Pandas (included in anaconda)
+
+Recommended:
+- Anaconda, a full package of python tools (https://www.anaconda.com)
+- Pycharm, which has a community edition and a full version that's free with 
+  .edu addresses. http://jetbrains.com/pycharm
+
+# Learning Resources and Useful Links
+
+Wiki: What is data profiling?
+https://en.wikipedia.org/wiki/Data_profiling
+
+Free python course on Udacity
+https://classroom.udacity.com/courses/ud1110
+
+The no deep shit guide to git
+http://rogerdudler.github.io/git-guide/
+
+Data sets that can be used for testing
+https://www.dataquest.io/blog/free-datasets-for-projects/
+
+
 # Installing
+
+
 
 # Automated test
 
@@ -26,15 +56,32 @@ for data exploration and assessing data quality.
 
 # Built with
 
+Python 3.6
+Pandas
+
+
 # Contributing
 
-# Authors
+Project is hosted at https://github.com/gregboyer/DataProfiler. 
+
+All pull requests require peer review of code before they can be merged. This is
+enforced via git.
 
 
 # Licensing
 This project is licensed under GNU GPLv3. See LICENSE.md for details
 
-# Features and Roadmap
+
+# Acknowledgments
+
+In researching this project, the pandas-profiling provided validation that
+this could really work:
+https://github.com/pandas-profiling/pandas-profiling/blob/master/README.md
+
+
+
+
+# Possible Features and Brainstorming
 
 ## Goals
 To assess data quality and characterics with minimum configuration, modification
@@ -57,22 +104,27 @@ last run. Are there any pending reorgs.
 
 ### Single column analysis (one table)
 
-For all columns, grab system information including remarks, data type, nullable,
-primary keys, indexes, etc.
+- For all columns, grab system information including remarks, data type, 
+nullable, primary keys, indexes, etc.
 
-Attempt to identify if values are categorical, range, etc.
+- Attempt to identify if values are categorical, range, etc.
+
+- Validation rules. Ability to create a quick library of rules that can be
+validated, maybe in the form of a regex expression? Can that deal with nulls?
+
+- Visualize distributions
 
 Summary
 - Number of variables
 - Total size in memory
 - time to execute
 - Variable types
-- - Numeric
-- - Categorical
-- - Bolean
-- - Text (unique(?))
-- - Rejected
-- - Unsupported
+-- Numeric
+-- Categorical
+-- Bolean
+-- Text (unique(?))
+-- Rejected
+-- Unsupported
 
 
 For all data types:
@@ -82,11 +134,11 @@ For all data types:
 - Uniqueness
 - Length
 - Warnings
-- - % missing > threshold
-- - % 0 > threshold
-- - high cardinality but not unique
-- - high correlation > threshold
-- - constant value
+-- % missing > threshold
+-- % 0 > threshold
+-- high cardinality but not unique
+-- high correlation > threshold
+-- constant value
 
 
 
@@ -101,11 +153,12 @@ For Ints:
 - Frequency(?)
 - Count
 - Sum
+- min/max/average length
 
 For Strings:
 - How many are max length (could indicate truncation)
-- Spellcheck?
 - Identify upper, lower, mixed case, all start with capital, etc.
+- pattern analysis. Phone numbers, addresses, emails, etc.
 
 Warnings that are available:
 
@@ -113,11 +166,14 @@ Warnings that are available:
 ### cross-column analysis
 - identify prospective keys
 - identify correlation (codes should be 1:1 with description etc.)
-- - identify multiple standards for flags (True/False 0/1 Y/N 1/blank account
-    for nulls)
+-- identify multiple standards for flags (True/False 0/1 Y/N 1/blank account
+   for nulls)
 
 ### Inter-table Analysis
 - overalapping value sets that may represent foreign key relatinships
+- visualize joins
+- cardinality
+- validate key integrity
 
 
 ## Output
@@ -134,7 +190,6 @@ What are automated tests and what do they do? Do they apply here?
 
 Always be thinking of error handling
 
-Similar project: 
-https://github.com/pandas-profiling/pandas-profiling/blob/master/README.md
+
 
 
