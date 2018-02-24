@@ -176,7 +176,7 @@ Warnings that are available:
 - validate key integrity
 
 
-## Output
+### Output
 - Begin with simple plaintext python output
 - Provide sample data (random, quasi-random, or just top?)
 - Progress to something user-readable, like an html output?
